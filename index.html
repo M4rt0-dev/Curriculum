@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mario Anguita Álvarez</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- El contenido se inyectará aquí -->
+    <div id="app"></div>
+
+    <!-- Botón Flotante para Descargar PDF -->
+    <!-- Asegúrate de poner tu archivo PDF real en la carpeta y cambiar el href -->
+    <a href="cv.pdf" download="Mario_Anguita_CV.pdf" class="pdf-fab" title="Descargar CV en PDF">
+        <i class="fa-solid fa-file-arrow-down"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('cv.json')
+                .then(response => response.json())
+                .then(data => renderPortfolio(data))
+                .catch(err => console.error('Error:', err));
+        });
+
+        function renderPortfolio(data) {
+            const app = document.getElementById('app');
+
+            // Función auxiliar para barras (estilo diferente, más minimalista)
+            const progressBar = (percent) => `
+                <div class="skill-container">
+                    <div class="skill-bar-bg">
+                        <div class="skill-bar-fill" style="width: ${percent}%"></div>
+                    </div>
+                </div>
+            `;
+
+            app.innerHTML = `
+                <!-- NAVBAR -->
+                <nav class="navbar">
+                    <div class="nav-brand">${data.personal.name}</div>
+                    <div class="nav-socials">
+                        <a href="${data.personal.linkedinUrl}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:${data.personal.email}"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </nav>
+
+                <!-- HERO SECTION -->
+                <header class="hero-section">
+                    <div class="hero-content fade-in">
+                        <div class="hero-text">
+                            <span class="badge">Fullstack Developer</span>
+                            <h1>Hola, soy Mario.</h1>
+                            <p class="hero-summary">${data.profile}</p>
+                            <div class="hero-info-pills">
+                                <span><i class="fa-solid fa-location-dot"></i> ${data.personal.location}</span>
+                                <span><i class="fa-solid fa-phone"></i> ${data.personal.phone}</span>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="${data.personal.photoUrl}" alt="${data.personal.name}">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- MAIN GRID CONTENT -->
+                <main class="grid-container">
+                    
+                    <!-- Tarjeta Experiencia -->
+                    <section class="card experience-card fade-in delay-1">
+                        <div class="card-header">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h2>Experiencia</h2>
+                        </div>
+                        <div class="card-body">
+                            ${data.experience.map(exp => `
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h3 class="timeline-title">${exp.position}</h3>
+                                    <span class="timeline-company">${exp.company}</span>
+                                    <span class="timeline-date">${exp.dates}</span>
+                                    <ul class="timeline-desc">
+                                        ${exp.description.map(d => `<li>${d}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+
+                    <!-- Tarjeta Educación -->
+                    <section class="card education-card fade-in delay-2">
+                        <div class="card-header">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h2>Educación</h2>
+                        </div>
+                        <div class="card-body">
+                            ${data.education.map(edu => `
+                                <div class="edu-block">
+                                    <h3>${edu.degree}</h3>
+                                    <div class="institution">${edu.institution}</div>
+                                    <div class="edu-date">${edu.dates}</div>
+                                    <p class="edu-detail">${edu.details}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+
+                    <!-- Tarjeta Hard Skills -->
+                    <section class="card hardskills-card fade-in delay-3">
+                        <div class="card-header">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Stack Tecnológico</h2>
+                        </div>
+                        <div class="skills-grid">
+                            ${data.hardSkills.map(skill => `
+                                <div class="skill-pill">
+                                    <i class="${skill.icon}"></i>
+                                    <span>${skill.name}</span>
+                                    ${progressBar(skill.percent)}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+
+                    <!-- Tarjeta Soft Skills & Idiomas -->
+                    <section class="card softskills-card fade-in delay-4">
+                        <div class="card-header">
+                            <i class="fa-solid fa-users"></i>
+                            <h2>Aptitudes e Idiomas</h2>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mini-title">Idiomas</h4>
+                            <div class="lang-row">
+                                ${data.languages.map(lang => `
+                                    <div class="lang-tag">
+                                        <strong>${lang.name}</strong> <small>${lang.level}</small>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <h4 class="mini-title" style="margin-top: 20px;">Soft Skills</h4>
+                            <div class="soft-tags">
+                                ${data.softSkills.map(s => `<span class="tag">${s.name}</span>`).join('')}
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+
+                <footer class="main-footer">
+                    <p>© ${new Date().getFullYear()} ${data.personal.name} - CV Interactivo</p>
+                </footer>
+            `;
+        }
+    </script>
+</body>
+</html>

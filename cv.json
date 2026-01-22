@@ -1,0 +1,70 @@
+{
+  "personal": {
+    "name": "MARIO ANGUITA ÁLVAREZ",
+    "role": "Desarrollador Fullstack",
+    "photoUrl": "./Perfil.jpg", 
+    "location": "Linares, Jaén",
+    "phone": "+34 618 85 78 50",
+    "email": "mario.ang.alvmaa@gmail.com",
+    "age": "21 años",
+    "linkedin": "mario-ang",
+    "linkedinUrl": "https://www.linkedin.com/in/mario-ang"
+  },
+  "profile": "Desarrollador Fullstack centrado en garantizar una gran experiencia de usuario y en hacer el código lo más sencillo posible. También tengo nociones de testing. Mi filosofía consiste en crear productos comprensibles, útiles y duraderos, reconociendo al mismo tiempo que nunca están terminados y que cambian constantemente. Siempre estoy dispuesto a afrontar nuevos retos y problemas.",
+  "experience": [
+    {
+      "company": "CodeArts",
+      "position": "Estudiante en prácticas",
+      "dates": "Enero 2025 - Febrero 2025",
+      "description": [
+        "Mantenimiento de la base de datos y registros.",
+        "Diseño, desarrollo, actualización y mantenimiento de aplicaciones de software.",
+        "Trabajo con distintas bases de datos y contextos back-end y front-end.",
+        "Mantenimiento y actualización de páginas web."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "FPGS, Desarrollo aplicaciones multiplataforma",
+      "institution": "Cesur Linares, Linares, Jaén",
+      "dates": "2024 - 2026",
+      "details": "Con excelentes aptitudes en programación de Java, Swift y PHP"
+    },
+    {
+      "degree": "Bachillerato, Tecnológico",
+      "institution": "I.E.S Cástulo, Linares, Jaén",
+      "dates": "2022 - 2024",
+      "details": "Con excelentes aptitudes en Programación e Industria"
+    }
+  ],
+  "languages": [
+    { "name": "Español", "level": "Nativo", "percent": 100 },
+    { "name": "Inglés", "level": "B2", "percent": 75 },
+    { "name": "Francés", "level": "A1", "percent": 25 }
+  ],
+  "softSkills": [
+    { "name": "Ganas de aprender", "percent": 95 },
+    { "name": "Trabajo en equipo", "percent": 90 },
+    { "name": "Capacidad de adaptación", "percent": 85 },
+    { "name": "Aprendizaje continuo", "percent": 90 },
+    { "name": "Buscar soluciones creativas", "percent": 80 },
+    { "name": "Resolución de problemas", "percent": 85 },
+    { "name": "Ambición profesional", "percent": 90 },
+    { "name": "Integridad y honestidad", "percent": 100 }
+  ],
+  "hardSkills": [
+    { "name": "Java", "icon": "fa-brands fa-java", "percent": 85 },
+    { "name": "PHP", "icon": "fa-brands fa-php", "percent": 80 },
+    { "name": "Swift", "icon": "fa-brands fa-swift", "percent": 70 },
+    { "name": "Kotlin", "icon": "fa-brands fa-android", "percent": 65 },
+    { "name": "HTML", "icon": "fa-brands fa-html5", "percent": 90 },
+    { "name": "CSS", "icon": "fa-brands fa-css3-alt", "percent": 85 },
+    { "name": "JavaScript", "icon": "fa-brands fa-js", "percent": 80 },
+    { "name": "MySQL", "icon": "fa-solid fa-database", "percent": 75 },
+    { "name": "Figma", "icon": "fa-brands fa-figma", "percent": 60 },
+    { "name": "Xcode", "icon": "fa-solid fa-laptop-code", "percent": 65 },
+    { "name": "VS Code", "icon": "fa-solid fa-code", "percent": 95 },
+    { "name": "IntelliJ IDEA", "icon": "fa-solid fa-terminal", "percent": 90 }
+  ]
+}
