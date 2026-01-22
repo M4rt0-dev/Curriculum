@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Anguita - Portfolio Profesional</title>
-    <!-- Iconos y Fuentes -->
+    <title>Portfolio - Mario Anguita</title>
+    <!-- Fuentes e Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,45 +13,45 @@
 
     <div id="app"></div>
 
-    <!-- Botón PDF Flotante -->
-    <a href="cv.pdf" download="Mario_Anguita_CV.pdf" class="pdf-fab" title="Descargar CV en PDF">
-        <i class="fa-solid fa-cloud-arrow-down"></i>
+    <!-- Botón de Descarga PDF -->
+    <!-- Asegúrate de tener el archivo cv.pdf en la misma carpeta -->
+    <a href="cv.pdf" download="CV_Mario_Anguita.pdf" class="pdf-fab" title="Descargar CV en PDF">
+        <i class="fa-solid fa-download"></i>
     </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetch('cv.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) throw new Error("No se pudo cargar el JSON");
+                    return response.json();
+                })
                 .then(data => {
                     renderPortfolio(data);
                     initInteractions();
                 })
-                .catch(err => console.error('Error cargando datos:', err));
+                .catch(err => {
+                    console.error('Error:', err);
+                    document.getElementById('app').innerHTML = `<p style="text-align:center; padding:50px;">Error cargando datos. Revisa la consola (F12).</p>`;
+                });
         });
 
         function renderPortfolio(data) {
             const app = document.getElementById('app');
             
-            // Función auxiliar barras
-            const progressBar = (percent) => `
-                <div class="skill-track">
-                    <div class="skill-progress" style="width: ${percent}%"></div>
-                </div>`;
-
+            // Renderizado del HTML
             app.innerHTML = `
-                <!-- NAVBAR INTERACTIVA -->
+                <!-- NAVBAR -->
                 <nav class="glass-nav">
                     <div class="nav-container">
-                        <a href="#" class="nav-logo">MA.</a>
+                        <a href="#profile" class="nav-logo">MA.</a>
                         <ul class="nav-links">
-                            <li><a href="#profile" class="active-link">Inicio</a></li>
+                            <li><a href="#profile">Inicio</a></li>
                             <li><a href="#experience">Experiencia</a></li>
                             <li><a href="#education">Formación</a></li>
                             <li><a href="#skills">Skills</a></li>
                         </ul>
-                        <div class="nav-contact">
-                            <a href="mailto:${data.personal.email}" class="btn-contact">Contactar</a>
-                        </div>
+                        <a href="mailto:${data.personal.email}" class="btn-contact">Contactar</a>
                     </div>
                 </nav>
 
@@ -61,15 +61,21 @@
                         <div class="hero-text">
                             <span class="greeting">Hola, soy</span>
                             <h1>${data.personal.name}</h1>
-                            <h2 class="subtitle">Desarrollador Fullstack</h2>
+                            <h2 class="subtitle">${data.personal.role}</h2>
                             <p class="summary">${data.profile}</p>
+                            
                             <div class="hero-actions">
-                                <a href="${data.personal.linkedinUrl}" target="_blank" class="btn-social"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-                                <span class="location-badge"><i class="fa-solid fa-location-dot"></i> ${data.personal.location}</span>
+                                <a href="${data.personal.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="btn-social">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                                </a>
+                                <span class="location-badge">
+                                    <i class="fa-solid fa-location-dot"></i> ${data.personal.location}
+                                </span>
                             </div>
                         </div>
                         <div class="hero-visual">
                             <div class="image-wrapper">
+                                <!-- Si usas foto local cambia la url en el json -->
                                 <img src="${data.personal.photoUrl}" alt="${data.personal.name}">
                             </div>
                         </div>
@@ -90,10 +96,8 @@
                                     <div class="card-date">${exp.dates}</div>
                                     <div class="card-content">
                                         <h3>${exp.position}</h3>
-                                        <h4>${exp.company}</h4>
-                                        <ul>
-                                            ${exp.description.map(d => `<li>${d}</li>`).join('')}
-                                        </ul>
+                                        <h4 class="company-name"><i class="fa-solid fa-building"></i> ${exp.company}</h4>
+                                        <ul>${exp.description.map(d => `<li>${d}</li>`).join('')}</ul>
                                     </div>
                                 </div>
                             `).join('')}
@@ -121,17 +125,16 @@
                         </div>
                     </section>
 
-                    <!-- SKILLS (Combinado Hard + Soft) -->
+                    <!-- SKILLS -->
                     <section id="skills" class="section-block scroll-trigger">
                         <div class="section-header">
-                            <h2 class="section-title">Habilidades & Stack</h2>
+                            <h2 class="section-title">Habilidades</h2>
                             <div class="separator"></div>
                         </div>
                         
                         <div class="skills-wrapper">
-                            <!-- Columna Técnica -->
                             <div class="skills-col">
-                                <h3 class="col-title"><i class="fa-solid fa-code"></i> Tecnologías</h3>
+                                <h3 class="col-title">Tecnologías</h3>
                                 <div class="tech-list">
                                     ${data.hardSkills.map(s => `
                                         <div class="tech-item">
@@ -139,15 +142,16 @@
                                                 <span><i class="${s.icon}"></i> ${s.name}</span>
                                                 <span class="pct">${s.percent}%</span>
                                             </div>
-                                            ${progressBar(s.percent)}
+                                            <div class="skill-track">
+                                                <div class="skill-progress" style="width: ${s.percent}%"></div>
+                                            </div>
                                         </div>
                                     `).join('')}
                                 </div>
                             </div>
 
-                            <!-- Columna Soft & Idiomas -->
                             <div class="skills-col">
-                                <h3 class="col-title"><i class="fa-solid fa-globe"></i> Idiomas</h3>
+                                <h3 class="col-title">Idiomas & Aptitudes</h3>
                                 <div class="lang-grid">
                                     ${data.languages.map(l => `
                                         <div class="lang-box">
@@ -156,44 +160,36 @@
                                         </div>
                                     `).join('')}
                                 </div>
-
-                                <h3 class="col-title" style="margin-top:2rem;"><i class="fa-solid fa-brain"></i> Aptitudes</h3>
                                 <div class="soft-tags">
                                     ${data.softSkills.map(s => `<span class="pill">${s.name}</span>`).join('')}
                                 </div>
                             </div>
                         </div>
                     </section>
-
                 </main>
 
                 <footer class="main-footer">
-                    <p>© ${new Date().getFullYear()} ${data.personal.name}. Todos los derechos reservados.</p>
+                    <p>© ${new Date().getFullYear()} ${data.personal.name} | Web Developer</p>
                 </footer>
             `;
         }
 
         function initInteractions() {
-            // 1. ANIMACIONES DE SCROLL (BIDIRECCIONALES)
-            // Cuando entras: aparece. Cuando sales (arriba o abajo): desaparece.
+            // 1. Scroll Reveal Bidireccional
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
                     } else {
-                        // IMPORTANTE: Quitamos la clase al salir para que
-                        // se vuelva a animar (desaparezca)
+                        // Al salir de pantalla, quitamos la clase para que se vuelva a animar al volver
                         entry.target.classList.remove('is-visible');
                     }
                 });
-            }, {
-                threshold: 0.15, // Se activa al ver el 15% del elemento
-                rootMargin: "0px 0px -50px 0px" // Ajuste para que no desaparezca demasiado pronto abajo
-            });
+            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
             document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
 
-            // 2. NAV ACTIVA AL HACER SCROLL
+            // 2. Active Link en Navbar
             const sections = document.querySelectorAll('header, section');
             const navLi = document.querySelectorAll('.nav-links li a');
 
@@ -201,19 +197,18 @@
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    // Ajuste de 150px por la altura del navbar
-                    if (pageYOffset >= (sectionTop - 150)) {
+                    if (window.scrollY >= (sectionTop - 150)) {
                         current = section.getAttribute('id');
                     }
                 });
 
                 navLi.forEach(a => {
                     a.classList.remove('active-link');
-                    if (a.getAttribute('href').includes(current)) {
+                    // Comprobamos si el href coincide con el ID actual
+                    if (a.getAttribute('href') === '#' + current) {
                         a.classList.add('active-link');
                     }
-                })
+                });
             });
         }
     </script>
