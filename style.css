@@ -324,7 +324,7 @@ body {
 .skill-track { width: 100%; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
 .skill-progress { height: 100%; background: var(--primary-bg); border-radius: 4px; }
 
-.lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
 .lang-box { background: var(--white); padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); text-align: center; border: 1px solid #eee; }
 .lang-name { display: block; font-weight: 700; }
 .lang-level { color: var(--accent-dark); font-size: 0.9rem; }
