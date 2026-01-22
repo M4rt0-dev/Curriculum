@@ -62,7 +62,7 @@
     { "name": "CSS", "icon": "fa-brands fa-css3-alt", "percent": 85 },
     { "name": "JavaScript", "icon": "fa-brands fa-js", "percent": 80 },
     { "name": "MySQL", "icon": "fa-solid fa-database", "percent": 75 },
-    { "name": "Figma", "icon": "fa-brands fa-figma", "percent": 60 },
+    { "name": "Figma", "icon": "fa-brands fa-figma", "percent": 75 },
     { "name": "Xcode", "icon": "fa-solid fa-laptop-code", "percent": 65 },
     { "name": "VS Code", "icon": "fa-solid fa-code", "percent": 95 },
     { "name": "IntelliJ IDEA", "icon": "fa-solid fa-terminal", "percent": 90 }
