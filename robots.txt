@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m4rt0-dev.es/sitemap.xml
