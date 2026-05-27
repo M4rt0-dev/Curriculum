@@ -14,6 +14,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://m4rt0-dev.es/experiencia.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://m4rt0-dev.es/experiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m4rt0-dev.es/experiencia.html"/>
+  </url>
+  <url>
+    <loc>https://m4rt0-dev.es/servicios.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://m4rt0-dev.es/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m4rt0-dev.es/servicios.html"/>
+  </url>
+  <url>
+    <loc>https://m4rt0-dev.es/proyectos.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://m4rt0-dev.es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m4rt0-dev.es/proyectos.html"/>
+  </url>
+  <url>
     <loc>https://m4rt0-dev.es/cv.pdf</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
