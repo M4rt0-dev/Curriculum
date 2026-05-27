@@ -168,11 +168,10 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: var(--nav-height);
+    padding: calc(var(--nav-height) + 20px) 0 20px;
     background: linear-gradient(to bottom, #f0f4f4 0%, var(--white) 100%);
 }
 
