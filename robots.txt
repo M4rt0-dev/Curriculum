@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Host: https://m4rt0-dev.es
 Sitemap: https://m4rt0-dev.es/sitemap.xml

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio y currículum de Mario Anguita Álvarez (Mario Anguita Alvarez), desarrollador fullstack en Linares (Jaén), con experiencia, formación y habilidades en desarrollo web y software.">
+    <meta name="keywords" content="Mario Anguita Álvarez, Mario Anguita Alvarez, desarrollador fullstack, portfolio desarrollador, currículum programador, Java, PHP, JavaScript, Linares, Jaén">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Mario Anguita Álvarez">
+    <meta name="geo.region" content="ES-J">
+    <meta name="geo.placename" content="Linares, Jaén">
     <link rel="canonical" href="https://m4rt0-dev.es/">
     <link rel="alternate" hreflang="es-ES" href="https://m4rt0-dev.es/">
+    <link rel="alternate" hreflang="x-default" href="https://m4rt0-dev.es/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://m4rt0-dev.es/sitemap.xml">
+    <link rel="me" href="https://www.linkedin.com/in/mario-ang/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Portfolio - Mario Anguita Álvarez">
@@ -15,12 +22,15 @@
     <meta property="og:description" content="Conoce la experiencia, formación y habilidades técnicas de Mario Anguita Álvarez (Mario Anguita Alvarez), desarrollador fullstack.">
     <meta property="og:url" content="https://m4rt0-dev.es/">
     <meta property="og:image" content="https://m4rt0-dev.es/Perfil.jpg">
+    <meta property="og:image:secure_url" content="https://m4rt0-dev.es/Perfil.jpg">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="608">
     <meta property="og:image:height" content="609">
     <meta property="og:image:alt" content="Foto de perfil de Mario Anguita Álvarez">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mario Anguita Álvarez | Desarrollador Fullstack">
     <meta name="twitter:description" content="Portfolio y currículum profesional de Mario Anguita Álvarez (Mario Anguita Alvarez), desarrollador fullstack.">
+    <meta name="twitter:url" content="https://m4rt0-dev.es/">
     <meta name="twitter:image" content="https://m4rt0-dev.es/Perfil.jpg">
     <meta name="twitter:image:alt" content="Foto de perfil de Mario Anguita Álvarez">
     <meta name="theme-color" content="#383838">
@@ -35,26 +45,72 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mario Anguita Álvarez",
-      "alternateName": "Mario Anguita Alvarez",
-      "givenName": "Mario",
-      "familyName": "Anguita Álvarez",
-      "jobTitle": "Desarrollador Fullstack",
-      "url": "https://m4rt0-dev.es/",
-      "image": {
-        "@type": "ImageObject",
-        "contentUrl": "https://m4rt0-dev.es/Perfil.jpg",
-        "caption": "Foto de perfil de Mario Anguita Álvarez"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Linares",
-        "addressRegion": "Jaén",
-        "addressCountry": "ES"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/mario-ang/"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://m4rt0-dev.es/#person",
+          "name": "Mario Anguita Álvarez",
+          "alternateName": "Mario Anguita Alvarez",
+          "givenName": "Mario",
+          "familyName": "Anguita Álvarez",
+          "jobTitle": "Desarrollador Fullstack",
+          "description": "Desarrollador Fullstack centrado en crear productos comprensibles, útiles y duraderos.",
+          "url": "https://m4rt0-dev.es/",
+          "email": "mario.ang.alvmaa@gmail.com",
+          "telephone": "+34 618 85 78 50",
+          "image": {
+            "@type": "ImageObject",
+            "contentUrl": "https://m4rt0-dev.es/Perfil.jpg",
+            "caption": "Foto de perfil de Mario Anguita Álvarez"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Linares",
+            "addressRegion": "Jaén",
+            "addressCountry": "ES"
+          },
+          "knowsAbout": [
+            "Java",
+            "PHP",
+            "JavaScript",
+            "Swift",
+            "Kotlin",
+            "MySQL",
+            "Desarrollo web",
+            "Desarrollo de software"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/mario-ang/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://m4rt0-dev.es/#website",
+          "url": "https://m4rt0-dev.es/",
+          "name": "Portfolio - Mario Anguita Álvarez",
+          "inLanguage": "es-ES",
+          "publisher": {
+            "@id": "https://m4rt0-dev.es/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://m4rt0-dev.es/#webpage",
+          "url": "https://m4rt0-dev.es/",
+          "name": "Mario Anguita Álvarez | Portfolio y CV",
+          "description": "Portfolio y currículum de Mario Anguita Álvarez, desarrollador fullstack en Linares (Jaén).",
+          "isPartOf": {
+            "@id": "https://m4rt0-dev.es/#website"
+          },
+          "about": {
+            "@id": "https://m4rt0-dev.es/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://m4rt0-dev.es/Perfil.jpg"
+          },
+          "inLanguage": "es-ES"
+        }
       ]
     }
     </script>
@@ -82,6 +138,19 @@
             <h1>Mario Anguita Álvarez - Desarrollador Fullstack</h1>
             <p>Portfolio y currículum de Mario Anguita Álvarez (Mario Anguita Alvarez), profesional con experiencia en desarrollo de software, mantenimiento web y trabajo fullstack.</p>
             <p>Incluye experiencia profesional, formación académica y habilidades técnicas en Java, PHP, Swift, Kotlin, HTML, CSS, JavaScript y MySQL.</p>
+            <h2>Experiencia profesional</h2>
+            <ul>
+                <li>Prácticas en CodeArts con foco en mantenimiento de bases de datos y desarrollo de software.</li>
+                <li>Experiencia en actualización y mantenimiento de páginas web y aplicaciones.</li>
+            </ul>
+            <h2>Formación</h2>
+            <ul>
+                <li>FPGS en Desarrollo de Aplicaciones Multiplataforma (Cesur Linares).</li>
+                <li>Bachillerato tecnológico en I.E.S. Cástulo (Linares, Jaén).</li>
+            </ul>
+            <h2>Contacto profesional</h2>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mario-ang/">mario-ang</a></p>
+            <p>Email: <a href="mailto:mario.ang.alvmaa@gmail.com">mario.ang.alvmaa@gmail.com</a></p>
         </section>
     </main>
 
