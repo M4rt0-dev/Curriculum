@@ -56,14 +56,20 @@
   "hardSkills": [
     { "name": "Java", "icon": "fa-brands fa-java", "percent": 85 },
     { "name": "PHP", "icon": "fa-brands fa-php", "percent": 80 },
-    { "name": "Swift", "icon": "fa-brands fa-swift", "percent": 70 },
+    { "name": "Swift", "icon": "fa-brands fa-swift", "percent": 76 },
     { "name": "Kotlin", "icon": "fa-brands fa-android", "percent": 65 },
+    { "name": "Angular", "icon": "fa-brands fa-angular", "percent": 73 },
+    { "name": "Ionic", "icon": "fa-solid fa-mobile-screen-button", "percent": 68 },
+    { "name": "Unity", "icon": "fa-brands fa-unity", "percent": 78 },
+    { "name": "Lua", "icon": "fa-solid fa-code", "percent": 50 },
+    { "name": "Glua", "icon": "fa-solid fa-code", "percent": 50 },
     { "name": "HTML", "icon": "fa-brands fa-html5", "percent": 90 },
     { "name": "CSS", "icon": "fa-brands fa-css3-alt", "percent": 85 },
     { "name": "JavaScript", "icon": "fa-brands fa-js", "percent": 80 },
+    { "name": "GitHub", "icon": "fa-brands fa-github", "percent": 95 },
     { "name": "MySQL", "icon": "fa-solid fa-database", "percent": 75 },
     { "name": "Figma", "icon": "fa-brands fa-figma", "percent": 75 },
-    { "name": "Xcode", "icon": "fa-solid fa-laptop-code", "percent": 65 },
+    { "name": "Xcode", "icon": "fa-solid fa-laptop-code", "percent": 73 },
     { "name": "VS Code", "icon": "fa-solid fa-code", "percent": 95 },
     { "name": "IntelliJ IDEA", "icon": "fa-solid fa-terminal", "percent": 90 }
   ]

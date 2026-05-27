@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio de Mario Anguita Álvarez",
+  "short_name": "Mario Anguita CV",
+  "description": "Portfolio y currículum de Mario Anguita Álvarez, desarrollador fullstack.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#383838",
+  "lang": "es-ES",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/Perfil.jpg",
+      "sizes": "608x609",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

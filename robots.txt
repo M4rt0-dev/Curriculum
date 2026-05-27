@@ -1,5 +1,16 @@
 User-agent: *
 Allow: /
+Disallow: /404
+Disallow: /tmp/
 
-Host: https://m4rt0-dev.es
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Host: m4rt0-dev.es
 Sitemap: https://m4rt0-dev.es/sitemap.xml

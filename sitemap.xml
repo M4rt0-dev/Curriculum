@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://m4rt0-dev.es/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://m4rt0-dev.es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m4rt0-dev.es/"/>
     <image:image>
       <image:loc>https://m4rt0-dev.es/Perfil.jpg</image:loc>
       <image:title>Foto de perfil de Mario Anguita Álvarez</image:title>
+      <image:caption>Retrato profesional de Mario Anguita Álvarez</image:caption>
     </image:image>
   </url>
   <url>
@@ -15,5 +18,23 @@
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://m4rt0-dev.es/cv.json</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://m4rt0-dev.es/llms.txt</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://m4rt0-dev.es/site.webmanifest</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
