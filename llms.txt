@@ -1,27 +1,83 @@
-# M4rt0-dev Portfolio
+# Mario Anguita Álvarez — Portfolio y CV
 
-This website contains the portfolio and CV of Mario Anguita Álvarez.
+## Identidad
+- Nombre: Mario Anguita Álvarez (también: Mario Anguita Alvarez)
+- Rol: Desarrollador Fullstack
+- Ubicación: Linares, Jaén, España
+- Edad: 21 años
+- LinkedIn: https://www.linkedin.com/in/mario-ang
+- Email: mario.ang.alvmaa@gmail.com
 
-## Site
+## Resumen profesional
+Desarrollador Fullstack centrado en garantizar una gran experiencia de usuario y en hacer el código lo más sencillo posible. Tengo nociones de testing. Mi filosofía consiste en crear productos comprensibles, útiles y duraderos, reconociendo al mismo tiempo que nunca están terminados y que cambian constantemente. Siempre dispuesto a afrontar nuevos retos y problemas.
+
+## Experiencia profesional
+- **Estudiante en Prácticas — CodeArts** (Enero 2025 – Febrero 2025, Linares, Jaén)
+  - Mantenimiento de la base de datos y registros del sistema.
+  - Diseño, desarrollo, actualización y mantenimiento de aplicaciones de software.
+  - Trabajo con distintas bases de datos y contextos back-end y front-end.
+  - Mantenimiento y actualización de páginas web.
+
+## Formación académica
+- **FPGS — Desarrollo de Aplicaciones Multiplataforma (DAM)** (2024–2026, Cesur Linares, Linares, Jaén). Excelentes aptitudes en Java, Swift y PHP.
+- **Bachillerato Tecnológico** (2022–2024, I.E.S. Cástulo, Linares, Jaén). Excelentes aptitudes en Programación e Industria.
+
+## Habilidades técnicas (stack)
+### Lenguajes de programación
+- Java (85 %) — backend, aplicaciones de escritorio y Android
+- PHP (80 %) — backend web y APIs
+- JavaScript (80 %) — frontend y Node
+- Swift (76 %) — aplicaciones nativas iOS/macOS con Xcode
+- Kotlin (65 %) — aplicaciones nativas Android
+- HTML (90 %) / CSS (85 %) — frontend web
+
+### Frameworks y entornos
+- Angular (73 %) — aplicaciones SPA y web dinámicas
+- Ionic (68 %) — apps híbridas multiplataforma (iOS + Android)
+- Unity (78 %) — videojuegos y experiencias interactivas (C#, Lua, GLua)
+
+### Herramientas
+- GitHub (95 %) — control de versiones y colaboración
+- MySQL (75 %) — diseño y mantenimiento de bases de datos relacionales
+- Figma (75 %) — diseño UI/UX y prototipado
+- VS Code (95 %), IntelliJ IDEA (90 %), Xcode (73 %)
+
+## Idiomas
+- Español: Nativo
+- Inglés: B2
+- Francés: A1
+
+## Habilidades blandas
+- Ganas de aprender, aprendizaje continuo, trabajo en equipo, adaptabilidad, resolución de problemas, ambición profesional, integridad y honestidad.
+
+## Proyectos destacados
+- **Portfolio y CV Web** — HTML, CSS, JavaScript, SEO técnico (schema.org, PWA, hreflang)
+- **Aplicaciones multiplataforma** — Ionic + Angular para iOS y Android desde un solo código base
+- **Apps iOS nativas** — Swift + Xcode, orientadas a rendimiento y Human Interface Guidelines
+- **Backend con Java y PHP** — APIs REST, gestión de datos con MySQL
+- **Videojuegos con Unity** — mecánicas C#, scripting Lua/GLua, prototipado rápido
+
+## Servicios disponibles
+- Desarrollo web fullstack (frontend + backend + BBDD)
+- Aplicaciones móviles nativas e híbridas
+- Mantenimiento y actualización de software existente
+- Videojuegos y experiencias interactivas con Unity
+- Diseño UI/UX con Figma
+
+## Páginas del sitio
+- Inicio (portfolio + CV): https://m4rt0-dev.es/
+- Experiencia y formación: https://m4rt0-dev.es/experiencia.html
+- Servicios de desarrollo: https://m4rt0-dev.es/servicios.html
+- Proyectos: https://m4rt0-dev.es/proyectos.html
+- CV en PDF: https://m4rt0-dev.es/cv.pdf
+- Datos CV (JSON): https://m4rt0-dev.es/cv.json
+
+## Recursos adicionales
 - Canonical URL: https://m4rt0-dev.es/
-- Language: Spanish (es)
-- Type: Personal portfolio / curriculum
+- Idioma: Español (es-ES)
+- Tipo: Portfolio personal / Currículum vitae
 - Sitemap: https://m4rt0-dev.es/sitemap.xml
 - Robots: https://m4rt0-dev.es/robots.txt
 - Web Manifest: https://m4rt0-dev.es/site.webmanifest
-
-## Key resources
-- Home: https://m4rt0-dev.es/
-- CV (PDF): https://m4rt0-dev.es/cv.pdf
-- CV data (JSON): https://m4rt0-dev.es/cv.json
-- Profile image: https://m4rt0-dev.es/Perfil.jpg
 - Favicon: https://m4rt0-dev.es/favicon.svg
-
-## Indexing hints
-- Main entity: Mario Anguita Álvarez (Fullstack Developer)
-- Geography: Linares, Jaén, Spain
-- Primary topics: fullstack development, web development, software engineering, CV/portfolio
-
-## Contact
-- LinkedIn: https://www.linkedin.com/in/mario-ang
-- Email: mario.ang.alvmaa@gmail.com
+- Foto de perfil: https://m4rt0-dev.es/Perfil.jpg
