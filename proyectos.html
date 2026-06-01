@@ -294,7 +294,7 @@
                 navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
             });
 
-            navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+            navLinks.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
             window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
             document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
         }
