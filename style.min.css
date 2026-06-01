@@ -124,6 +124,10 @@ body {
     width: 100%;
 }
 
+.nav-links a.btn-contact {
+    color: var(--white);
+}
+
 .btn-contact {
     padding: 8px 20px;
     background-color: var(--primary-bg);
